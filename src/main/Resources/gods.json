@@ -1,0 +1,89 @@
+{
+"DeckGods":
+      [
+        {
+          "name": "Apollo",
+          "description": "Your Worker may move into an opponent Worker’s space by forcing their Worker to the space yours just vacated",
+          "effect": ["BeforeMoveBasic", "Swap", "BuildBasic", "EndTurnBasic" ],
+          "players_in_game": [2,3]
+        },
+        {
+          "name": "Artemis",
+          "description": "Your Worker may move one additional time, but not back to its initial space",
+          "effect": ["BeforeMoveBasic", "MoveTwice", "BuildBasic", "EndTurnBasic" ],
+          "players_in_game": [2,3]
+        },
+        {
+          "name": "Athena",
+          "description": "If one of your Workers moved up on your last turn, opponent Workers cannot move up this turn",
+          "effect": ["BeforeMoveBasic", "DenyUp", "BuildBasic", "EndTurnBasic"],
+          "players_in_game": [2,3]
+        },
+        {
+          "name": "Atlas",
+          "description": "Your Worker may build a dome at any level",
+          "effect": ["BeforeMoveBasic", "MoveBasic", "DomeMaster", "EndTurnBasic" ],
+          "players_in_game": [2,3]
+        },
+        {
+          "name": "Demeter",
+          "description": "Your Worker may build one additional time, but not on the same space",
+          "effect": ["BeforeMoveBasic", "MoveBasic", "BuildTwice", "EndTurnBasic" ],
+          "players_in_game": [2,3]
+        },
+        {
+          "name": "Prometheus",
+          "description": "If your Worker does not move up, it may build both before and after moving",
+          "effect": ["BuildBeforeMove", "MoveNoUp", "BuildBasic", "EndTurnBasic" ],
+          "players_in_game": [2,3]
+        },
+        {
+          "name": "Hephaestus",
+          "description": "Your Worker may build one additional block (not dome) on top of your first block",
+          "effect": ["BeforeMoveBasic", "MoveBasic", "BuildUp", "EndTurnBasic" ],
+          "players_in_game": [2,3]
+        },
+        {
+          "name": "Minotaur",
+          "description": "Your Worker may move into an opponent Worker’s space, if their Worker can be forced one space straight backwards to an unoccupied space at any level",
+          "effect": ["BeforeMoveBasic", "Push", "BuildBasic", "EndTurnBasic" ],
+          "players_in_game": [2,3]
+        },
+        {
+          "name": "Pan",
+          "description": "You also win if your Worker moves down two or more levels",
+          "effect": ["BeforeMoveBasic", "WinByFallingDown", "BuildBasic" , "EndTurnBasic" ],
+          "players_in_game": [2,3]
+        },
+        {
+          "name": "Ares",
+          "description": "You may remove an unoccupied block (not dome) neighboring your unmoved Worker",
+          "effect": ["BeforeMoveBasic", "MoveBasic", "BuildBasic", "RemoveBlock"],
+          "players_in_game": [2,3]
+        },
+        {
+          "name": "Chronus",
+          "description": "You also win when there are at least five Complete Towers on the board",
+          "effect": ["BeforeMoveBasic", "MoveBasic", "BuildBasic", "EndTurnBasic"],
+          "players_in_game": [2]
+        },
+        {
+          "name": "Medusa",
+          "description": "If possible, your Workers build in lower neighboring spaces that are occupied by opponent Workers, removing the opponent Workers from the game",
+          "effect": ["BeforeMoveBasic", "MoveBasic", "BuildBasic", "WorkerToBlock"],
+          "players_in_game": [2,3]
+        },
+        {
+          "name": "Poseidon",
+          "description": "If your unmoved Worker is on the ground level, it may build up to three times",
+          "effect": ["BeforeMoveBasic", "MoveBasic", "BuildBasic", "TripleBuild"],
+          "players_in_game": [2,3]
+        },
+        {
+          "name": "Zeus",
+          "description": "Your Worker may build a block under itself.",
+          "effect": ["BeforeMoveBasic", "MoveBasic", "BuildBelow", "EndTurnBasic"],
+          "players_in_game": [2,3]
+        }
+      ]
+}
