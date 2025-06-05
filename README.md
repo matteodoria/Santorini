@@ -13,16 +13,6 @@ This document outlines the requirements, setup instructions, and additional tech
 
 ---
 
-## 🚀 How to Launch
-
-Open your terminal or command prompt and use the following command:
-
-```bash
-java -jar /path/to/santorini.jar [mode]
-```
-
-Replace `/path/to/` with the actual path to the `.jar` file.
-
 ### Available Modes
 
 | Mode     | Keyword       | Description                           |
@@ -33,6 +23,27 @@ Replace `/path/to/` with the actual path to the `.jar` file.
 | Invalid  | *(other)*     | Any other keyword will terminate the program. |
 
 > *Keywords are case-insensitive.*
+
+## 🚀 How to Play
+
+1. Open your terminal or command prompt and launch a server:
+```bash
+java -jar /path/to/santorini.jar server
+```
+
+2. To play 
+- using the GUI, double click or open another terminal and use the command
+```bash
+java -jar /path/to/santorini.jar
+```
+- using the CLI, open another terminal and use the command
+```bash
+java -jar /path/to/santorini.jar CLI
+```
+
+
+
+Replace `/path/to/` with the actual path to the `.jar` file.
 
 ---
 
@@ -59,4 +70,4 @@ reg add HKEY_CURRENT_USER\Console /v VirtualTerminalLevel /t REG_DWORD /d 0x0000
 - **Default IP**: `localhost`
 - **Default Port**: `9100`
 - The server always listens on port **9100**.
-- These settings can be modified in the file `connection.json`.
+- These settings can be modified in the file `src/main/Resources/Connection.json`.
